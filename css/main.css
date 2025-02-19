@@ -18,53 +18,62 @@ html {
 body {
     width: 100%;
     height: 100%;
+    margin: 0;
     background-color: hsl(0, 0%, 95%);
     font-size: 15px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-div {
-    flex: auto;
+div#main {
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+}
+
+div div {
+    flex: 1 1 0;
     display: flex;
     flex-direction: column;
 }
 
-div header {
+div div header {
+    flex: none;
+    padding: 3em;
+}
+
+div div main {
+    flex: auto;
+    padding: 0 3em;
+    display: flex;
+    flex-direction: column;
+}
+
+div div footer {
+    flex: none;
+    padding: 3em;
+}
+
+div div main h2 {
     margin: 0;
-    flex: none;
-}
-
-div main {
-    flex: auto;
-    display: flex;
-    flex-direction: column;
-}
-
-div footer {
-    flex: none;
-}
-
-div main h2 {
-    width: 100%;
     color: hsl(0, 0%, 95%);
     font-size: 2.5em;
     font-family: "Big Shoulders Display";
     text-transform: uppercase;
     line-height: 1em;
-    margin: 0;
 }
 
-div main p {
+div div main p {
     color: hsla(0, 0%, 100%, 0.75);
     font-family: "Lexend Deca";
     line-height: 2em;
     margin: 2em 0;
 }
 
-div footer button {
+div div footer button {
     background-color: hsl(0, 0%, 95%);
     border: none;
     line-height: 1em;
@@ -72,5 +81,5 @@ div footer button {
     border-radius: 1.5em;
     font-family: "Lexend Deca";
     text-decoration: none;
-    margin: 0;
+    padding: 1em 2em;
 }
